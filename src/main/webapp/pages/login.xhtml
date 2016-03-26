@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <h:outputStylesheet library="css" name="sistema.css"/>
+    </h:head>
+    <h:body>
+        <div id="div-login">
+            <h:form id="frmLogin">
+                <p:panel style="border: none;">
+                    <p>#{msgs.loginHello}</p>
+                    <p:growl showDetail="false" life="3000"/>
+                    <p:panelGrid columns="2" styleClass="grid-login">
+                        <p:outputLabel value="#{msgs.loginUserName}"/>
+                        <p:inputText value="#{loginController.login}" label="Login" id="login" rendered="true">
+                            <f:validateLength minimum="4"/>
+                        </p:inputText>
+
+                        <p:outputLabel value="#{msgs.loginPassword}"/>
+                        <p:password value="#{loginController.password}" label="Password" id="senha" rendered="true" autocomplete="off">
+                            <f:validateLength minimum="4"/>
+                        </p:password>
+                        <h:panelGroup/>
+                        <p:commandButton action="#{loginController.entrar}" value="Entrar" ajax="false" icon="ui-icon-star"/>
+                    </p:panelGrid>    
+                </p:panel>
+            </h:form>
+        </div>
+    </h:body>
+</html>

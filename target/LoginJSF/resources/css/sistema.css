@@ -1,0 +1,12 @@
+#div-login{
+    width: 500px;
+    margin: auto;
+    margin-top: 150px;
+}
+.grid-login{
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    boder: 1px solid #ccc;
+    margin-top: 8px;
+    padding: 10px;
+}
